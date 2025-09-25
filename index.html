@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Wonderlust Travel- Destination Majorca</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+        <a class="skip-link" href='#main'>Skip to Main Content</a>
+        <a class="skip-link" href='#plan-your-trip'>Skip to Plan Your Trip</a>
+        <a class="skip-link" href='#testimonials'>Skip to Testimonials</a>
+        <a class="skip-link" href='#about-your-destination'>Skip to About Your Destination</a>
+        <a class="skip-link" href='#contact-us'>Skip to Contact Us</a>
     <header>
         <h1>Destination Majorca</h1>
         <p>Let Wonderlust Travel help you plan the trip of your dreams!
@@ -24,10 +28,10 @@
             <li><a href="#">Destinations</a></li>
             <li><a href="#">Inspirations</a></li>
             <li><a href="#">Special</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main">
         <article>
             <h2>Majorca</h2>
             <section id="intro">
@@ -225,66 +229,66 @@
     <footer>
         <section id="contact-us">
             <h3>Contact Us <span id="required">(*required)</span></h3>
-            
+                <form>
                 <div>
-                    <label>First Name<span>*</span></label>
-                    <input>
+                    <label for="first-name">First Name<span>*</span></label>
+                    <input type="text" id="first-name" name="first-name" required>
                 </div>
                 <div>
-                    <label>Last Name<span>*</span></label>
-                    <input>
+                    <label for="last-name">Last Name<span>*</span></label>
+                    <input type="text" id="last-name" name="last-name" required>
                 </div>
                 <div>
-                    <label>Email<span>*</span></label>
-                    <input>
+                    <label for="email">Email<span>*</span></label>
+                    <input type="email" id="email" name="email" required >
                 </div>
                 <div>
-                    <label>Phone<span>*</span></label>
-                    <input>
+                    <label for="phone">Phone<span>*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
                 <fieldset id="preferred-contact">
                 <legend>Preferred Contact Method<span>*</span></legend>
                     <div> 
-                        <input>
-                        <label>Email</label>
+                        <input type="radio" id="contact-email" name="contact-method" value="email">
+                        <label for="contact-email">Email</label>
                     </div>
                     <div>
-                        <input>
-                        <label>Text</label>
+                        <input type="radio" id="contact-text" name="contact-method" value="text">
+                        <label for="contact-text">Text</label>
                     </div>
                     <div>
-                        <input>
-                        <label>Phone</label>
+                        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                        <label for="contact-phone">Phone</label>
                     </div>
                 </fieldset>
                 <fieldset id="destination">
                     <legend>Destination<span>*</span></legend>
-                    <select id="select-destination">
-                        <option>Choose</option>
-                        <option>Barcelona</option>
-                        <option>Granada</option>
-                        <option>Ibiza</option>
-                        <option>Madrid</option>
-                        <option>Majorca</option>
-                        <option>Seville</option>
-                        <option>Tenerife</option>
-                        <option>Valencia</option>
-                        <option>Other</option>
+                    <select id="select-destination" name="destination" required>
+                        <option value="">Choose</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Ibiza">Ibiza</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Majorca">Majorca</option>
+                        <option value="Seville">Seville</option>
+                        <option value="Tenerife">Tenerife</option>
+                        <option value="Valencia">Valencia</option>
+                        <option value="Other">Other</option>
                     </select>
                 </fieldset>
                 <fieldset id="travelTime">
                     <legend>Travel Time<span>*</span></legend>
-                    <select id="select-travel-time">
-                        <option>Choose</option>
-                        <option>Fall</option>
-                        <option>Winter</option>
-                        <option>Spring</option>
-                        <option>Summer</option>
-                        <option>Flexible</option>
+                    <select id="select-travel-time" name="travel-time" required>
+                        <option value="">Choose</option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Flexible">Flexible</option>
                     </select>
                 </fieldset>
-                <input>
-            
+                <input type="submit" value="Submit">
+            </form>
         </section>
         <section id="legal">
             <h3>Legal</h3>
